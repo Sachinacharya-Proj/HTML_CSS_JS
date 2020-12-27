@@ -1,0 +1,587 @@
+@font-face {
+  font-family: 'BravAda-Arma-Regular';
+  src: url("/font/BravAda-Arma-Regular.ttf.woff") format("woff"), url("/font/BravAda-Arma-Regular.ttf.svg#BravAda-Arma-Regular") format("svg"), url("/font/BravAda-Arma-Regular.ttf.eot"), url("/font/BravAda-Arma-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background: #f2f2f2;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  cursor: url("/cursor/main.cur"), auto;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 75px;
+  line-height: 50px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px 10px 10px 0;
+}
+
+nav div {
+  text-align: left;
+  padding-left: 20px;
+  color: white;
+  font-family: "Trade Winds", cursive;
+  font-size: 22px;
+  width: 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+nav div:hover {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: black;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  cursor: url("/cursor/cursor.cur"), pointer;
+}
+
+nav ul {
+  padding-top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  width: 800px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+nav ul li {
+  color: white;
+  cursor: url("/cursor/hightlight.cur"), pointer;
+  font-family: "Anton", sans-serif;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul li a {
+  position: relative !important;
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: block;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #e94c3f;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav ul li a:hover {
+  color: #e94c3f;
+  cursor: url("/cursor/hightlight.cur"), pointer;
+}
+
+nav ul li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+#svgLogo {
+  cursor: url("/cursor/cursor.cur"), pointer;
+}
+
+#svglogo path:nth-child(2) {
+  stroke-dasharray: 336.0128479003906;
+  stroke-dashoffset: 336.0128479003906;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+}
+
+#svglogo path:nth-child(3) {
+  stroke-dasharray: 242.136474609375;
+  stroke-dashoffset: 242.136474609375;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#svglogo path:nth-child(4) {
+  stroke-dasharray: 181.51454162597656;
+  stroke-dashoffset: 181.51454162597656;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#svglogo path:nth-child(5) {
+  stroke-dasharray: 252.89198303222656;
+  stroke-dashoffset: 252.89198303222656;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#svglogo path:nth-child(6) {
+  stroke-dasharray: 115.40562438964844;
+  stroke-dashoffset: 115.40562438964844;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+#svglogo path:nth-child(7) {
+  stroke-dasharray: 263.1415710449219;
+  stroke-dashoffset: 263.1415710449219;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+#svglogo path:nth-child(8) {
+  stroke-dasharray: 351.44476318359375;
+  stroke-dashoffset: 351.44476318359375;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+#svglogo path:nth-child(9) {
+  stroke-dasharray: 181.51614379882812;
+  stroke-dashoffset: 181.51614379882812;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#svglogo path:nth-child(10) {
+  stroke-dasharray: 252.89291381835938;
+  stroke-dashoffset: 252.89291381835938;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+#svglogo path:nth-child(11) {
+  stroke-dasharray: 242.13717651367188;
+  stroke-dashoffset: 242.13717651367188;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+#svglogo path:nth-child(12) {
+  stroke-dasharray: 336.0128479003906;
+  stroke-dashoffset: 336.0128479003906;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+
+#svglogo path:nth-child(13) {
+  stroke-dasharray: 242.136474609375;
+  stroke-dashoffset: 242.136474609375;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+#svglogo path:nth-child(14) {
+  stroke-dasharray: 181.51454162597656;
+  stroke-dashoffset: 181.51454162597656;
+  -webkit-animation: ReturnText 2s ease forwards;
+          animation: ReturnText 2s ease forwards;
+  -webkit-animation-delay: 6.6s;
+          animation-delay: 6.6s;
+}
+
+@-webkit-keyframes ReturnText {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ReturnText {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .cliper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3000;
+}
+
+.home .goodAtDivisions {
+  position: absolute;
+  bottom: 12rem;
+  z-index: 10000;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 130px;
+  padding: 10px;
+  width: 620px;
+}
+
+.home .goodAtDivisions h3 {
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  text-shadow: 10px 5px 5px #000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.home .goodAtDivisions div {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .goodAtDivisions div div {
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: url("/cursor/cursor.cur"), pointer;
+  margin: 10px;
+  background: black;
+  -webkit-transition: 1s all linear;
+  transition: 1s all linear;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 5px 5px 10px #111111, -5px -5px 10px #111111, inset -5px -5px 10px rgba(255, 255, 255, 0.1), inset 5px 5px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 5px 5px 10px #111111, -5px -5px 10px #111111, inset -5px -5px 10px rgba(255, 255, 255, 0.1), inset 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.home .goodAtDivisions div div:hover {
+  -webkit-box-shadow: inset 5px 5px 10px #111111, inset -5px -5px 10px #111111, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 5px 5px 10px #111111, inset -5px -5px 10px #111111, -5px -5px 10px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.home .goodAtDivisions div div:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home .goodAtDivisions div div:hover p {
+  color: #e94c3f;
+}
+
+.home .goodAtDivisions div div img {
+  height: 50px;
+  width: 50px;
+  -webkit-filter: grayscale(10);
+          filter: grayscale(10);
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+.home .goodAtDivisions div div p {
+  color: #ccc;
+  font-family: "Roboto Condensed", sans-serif;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  font-weight: bold;
+}
+
+.home .myBasicDetails {
+  z-index: 1000000;
+  position: absolute;
+  top: 35%;
+  left: 50px;
+  color: white;
+  font-family: "Anton", sans-serif;
+  text-shadow: 0px 0px 15px red;
+}
+
+.home .myBasicDetails h1 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  font-weight: normal;
+  font-size: 35px;
+  padding: 10px 10px 30px 10px;
+  -webkit-box-reflect: below -65px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.home .myBasicDetails h1 .name {
+  color: #2c0000;
+}
+
+.home .myBasicDetails h2 {
+  font-weight: normal;
+  padding: 20px 10px 10px 10px;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+.home .myBasicDetails h2 .cursorBlink {
+  -webkit-animation: blink 0.5s linear infinite alternate;
+          animation: blink 0.5s linear infinite alternate;
+}
+
+.home .myBasicDetails h2 .cursorBlink.typing {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.home .logoContainer {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 50px;
+  z-index: 100000;
+  height: 250px;
+  width: 250px;
+}
+
+.home .logoContainer .logoDiv img {
+  height: 100%;
+  width: 100%;
+  cursor: url("/cursor/cursor.cur"), pointer;
+}
+
+.home .logoContainer p {
+  color: white;
+  position: absolute;
+  bottom: -10px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  background: transparent;
+  padding: 10px;
+  font-size: 25px;
+  font-family: "Trade Winds", cursive;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  left: 20px;
+  cursor: url("/cursor/cursor.cur"), pointer;
+}
+
+.home .logoContainer p:hover {
+  -webkit-text-fill-color: white;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+}
+
+.home .innerSlider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.home .innerSlider img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.home .toggler {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 10px;
+}
+
+.home .toggler div {
+  height: 22px;
+  width: 22px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: url("/cursor/cursor.cur"), pointer;
+  border: 3px solid white;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+.home .scrollBox {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+  left: 50%;
+}
+
+.home .scrollBox .scrollShower {
+  height: 75px;
+  width: 45px;
+  background: transparent;
+  border-radius: 60px;
+  position: relative;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.home .scrollBox .scrollShower div {
+  height: 20px;
+  width: 5px;
+  border-radius: 10px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-name: goUpDown;
+          animation-name: goUpDown;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+.home .scrollBox p {
+  text-align: center;
+  z-index: 5;
+  padding-top: 10px;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+@-webkit-keyframes goUpDown {
+  from {
+    bottom: 10px;
+    height: 10px;
+  }
+  to {
+    height: 20px;
+    bottom: calc(75% - 10px);
+  }
+}
+
+@keyframes goUpDown {
+  from {
+    bottom: 10px;
+    height: 10px;
+  }
+  to {
+    height: 20px;
+    bottom: calc(75% - 10px);
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.updatingText {
+  color: orangered;
+}
+/*# sourceMappingURL=style.css.map */

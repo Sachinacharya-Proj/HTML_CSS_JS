@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+section{
+    background: rgb(7, 70, 61);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 80px 400px 200px 400px;
+    text-align: center;
+    user-select: none;
+
+    h2{
+        padding: 10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 1px;
+        -webkit-font-smoothing: antialiased;
+        transition: 0.6s all linear;
+        text-shadow: 0 0 10px #fff;
+        
+        &:hover{
+            background: linear-gradient(to right,blue, yellow, gold, purple);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+    }
+    p{
+        font-family: sans-serif;
+        padding: 10px;
+        text-shadow: 0 0 10px #fff;
+        font-weight: bold;
+    }
+}
+
+.preload{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #42748f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: 0.6s all linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.preload.loaded{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cloud1, .cloud2,.cloud3{
+    height: 100px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.cloud1{
+    top: 25%;
+    transform: translate(100%,-25%);
+    animation: cloud 3s ease infinite;
+    
+}
+
+.cloud2{
+    top: 50%;
+    transform: translate(100%,-50%) perspective(1000px);
+    animation: cloud 3s ease infinite 2s;
+    z-index: 1;
+}
+
+.cloud3{
+    top: 75%;
+    transform: translate(100%,-75%);
+    animation: cloud 3s ease infinite 1s;
+}
+
+.airplane{
+    height: 200px;
+    animation: airplane 1s ease infinite alternate-reverse;
+}
+
+.preload h3{
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+@keyframes airplane{
+    from{
+        transform: translateY(0px);
+    }to{
+        transform: translateY(50px);
+    }
+}
+
+@keyframes cloud{
+    from{
+        right: 0;
+
+    }to{
+        right: 130%;
+    }
+}

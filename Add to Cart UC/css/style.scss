@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: url('/img/background.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: rgba(#fff,0.3);
+    border-radius: 10px;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        background: #000;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        margin: 10px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        button{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: rgba(#000,0.3);
+            border: none;
+            outline: none;
+            font-weight: bold;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.cart{
+    color: orangered;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(#fff,0.2);
+    cursor: pointer;
+}
+
+.add::before{
+    content: "ADD-TO-CART";
+    width: 100%;
+    height: 100%;
+}
+
+.remove::before{
+    content: "Remove From Cart";
+    width: 100%;
+    height: 100%;
+}

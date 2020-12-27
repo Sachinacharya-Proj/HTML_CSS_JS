@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, rgb(2, 2, 24), rgb(8, 8, 58));
+    overflow: hidden;
+}
+
+.circleOne{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(28, 99, 156), rgb(124, 71, 173));
+    position: absolute;
+    top: -90px;
+    left: -90px;
+}
+
+.circleTwo{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(219, 65, 111), rgb(169, 24, 212));
+    position: absolute;
+    bottom: -30px;
+    right: -220px;
+}
+
+.cards_containner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cards{
+        width: 300px;
+        height: 400px;
+        background: rgba(rgba(131, 128, 128, 0.733), 0.2);
+        margin: 10px;
+        z-index: 1;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transform-style: preserve-3d;
+        .image{
+            width: 200px;
+            height: 200px;
+            background: rgba(#000, 0.6);
+            border-radius: 50%;
+            align-self: center;
+            padding: 10px;
+            overflow: hidden;
+            
+            img{
+                transform: translateZ(20px);
+                height: 100%;
+                border-radius: 50%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text{
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            padding: 20px 0;
+            height: 170px;
+            overflow: hidden;
+            
+            .icons{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 0px 50px;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 20px;
+                height: 100px;
+                overflow: hidden;
+                background: transparent;
+                div{
+                    transition: 0.3s all linear;
+                    margin-top: 80px;
+                    opacity: 0;
+                    &:hover{
+                        color: orangered;
+                    }
+                }
+
+                .one{
+                    transition-delay: 0s;
+                }
+                .two{
+                    transition-delay: 0.1s;
+                }
+                .three{
+                    transition-delay: 0.2s;
+                }
+
+            }
+        }
+
+        &:hover{
+            .text{
+                .icons{
+                    div{
+                        display: block;
+                        margin-top: -50px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

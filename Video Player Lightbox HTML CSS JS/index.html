@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logo1.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Video Player | HTML CSS JS</title>
+</head>
+<body>
+    <div class="container">
+        <!--START VIDEO CONTAINER-->
+        <div class="videoContainer">
+            <video src="/video/Gaming Intro.mp4" poster="/video/wp2042812.jpg">
+            YOUR BROWSER DOESN"T SUPPORT VIDEO FORMATE OF THIS VIDEO
+            <track kind="captions" srclang="ONE" src="/tracks.vtt">
+            <track srclang="TWO" src="/trackss.vtt">
+            </video>
+        </div>
+        <!--START VIDEO CONTAINER-->    
+        <!--MENU-->
+        <div class="menu" onclick="HideShow()">
+        <svg width="6" height="37" viewBox="0 0 13 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6.5" cy="6.5" r="6.5" fill="white"/>
+            <circle cx="6.5" cy="40.5" r="6.5" fill="white"/>
+            <circle cx="6.5" cy="23.5" r="6.5" fill="white"/>
+        </svg> 
+        </div>  
+        <!--MENU-->
+        <!--MENU OPTIONS-->
+        <div class="menuOtions open">
+            <p onclick="HideShow()">PlayBack Speed: <input type="number" class="speed" min="0" step="0.5" max="3" value="1"></p>
+            <p><a href="/video/Gaming Intro.mp4" download="">Download</a></p>
+            <p class="muteOrNot" onclick="SoundThrow(),HideShow()">Mute</p>
+            <p onclick="HideShow()" class="loopOrNot">Enable Loop</p>
+        </div>
+        <!--MENU OPTIONS-->
+        <!--START CONTROLS CONTAINER-->
+        <div class="controlsContainer">
+            <div class="progressDiv">
+                <input type="range" id="input" class="bar bar2" min="0" max="100" value="0">
+                <div class="bar bar1" id="barInput"></div>
+            </div>
+            <div class="buttonDiv">
+
+                <button class="prev" title="Backward by 5 sec">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+
+                <button class="playPause play" title="Toggle PlayPause"></button>
+
+                <button class="next" title="Forward by 5 Sec">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+
+                <button class="captions">
+                    <i class="fas fa-closed-captioning"></i>
+                </button>
+                
+                <button class="pipBtn" title="Picture-In-Picture mode">
+                    <svg width="26" height="21" viewBox="0 0 70 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="-7" width="62" height="46" rx="5" fill="none" stroke="white" stroke-width="7"/>
+                        <rect x="28" y="10" width="26" height="20" rx="4" fill="white"/>
+                    </svg>                        
+                </button>
+                <button class="screenToggle full" title="FullScreen In/out"></button>
+            </div>
+        </div>
+        <!--ENDS CONTROLS CONTAINER-->
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

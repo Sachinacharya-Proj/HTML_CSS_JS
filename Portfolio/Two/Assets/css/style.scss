@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan&family=Anton&family=Courgette&family=Kalam&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital@0;1&family=Oswald&family=Pathway+Gothic+One&family=Playball&family=Righteous&family=Roboto&family=Squada+One&family=Teko&family=Trade+Winds&family=Yanone+Kaffeesatz&family=Yellowtail&display=swap');
+@font-face {font-family: 'BravAda-Arma-Regular';src:url('/Assets/font/BravAda-Arma-Regular.ttf.woff') format('woff'),url('/Assets/font/BravAda-Arma-Regular.ttf.svg#BravAda-Arma-Regular') format('svg'),url('/Assets/font/BravAda-Arma-Regular.ttf.eot'),url('/Assets/font/BravAda-Arma-Regular.ttf.eot?#iefix') format('embedded-opentype'); font-weight: normal;font-style: normal;}
+$bravAda: 'BravAda-Arma-Regular';
+$allan: 'Allan', cursive;// Itallic Long
+$anton: 'Anton', sans-serif;
+$courgette: 'Courgette', cursive;
+$kallam: 'Kalam', cursive;
+$kaushan: 'Kaushan Script', cursive;
+$lobster: 'Lobster', cursive;
+$lobserTwo: 'Lobster Two', cursive;
+$ostwald: 'Oswald', sans-serif;
+$Pathway: 'Pathway Gothic One', sans-serif;
+$playball: 'Playball', cursive;
+$righteous: 'Righteous', cursive;
+$roboto: 'Roboto', sans-serif;
+$squada: 'Squada One', cursive;
+$teko: 'Teko', sans-serif;
+$tradeWinds: 'Trade Winds', cursive;
+$yanone: 'Yanone Kaffeesatz', sans-serif;
+$yellow: 'Yellowtail', cursive;
+$main: url('/Assets/cursor/main.cur'), auto;
+$pointer: url('/Assets/cursor/cursor.cur'), pointer;
+$highlight: url('/Assets/cursor/hightlight.cur'), pointer;
+//Basic Formating
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: $main;
+}
+
+li,button{
+    cursor: $pointer;
+}
+
+a{
+    cursor: $highlight;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: url('/Assets/img/Background/Primary\ 2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .main{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+nav{
+    display: flex;
+    height: 100%;
+    width: 340px;
+    background: rgba(#000, 0.85);
+    flex-direction: column;
+    margin-right: -340px;
+    transition: 0.6s all linear;
+    div{
+        padding: 45px 20px;
+        color: white;
+        font-family: $bravAda;
+        font-size: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li{
+        list-style: none;
+        display: block;
+        margin: 10px;
+
+        a{
+            display: block;
+            padding: 10px;
+            background: rgba(#000, 0.05);
+            text-decoration: none;
+            color: white;
+            font-family: $teko;
+            font-size: 18px;
+            transition: 0.6s all linear;
+
+            &:hover{
+                background: rgba(#000, 0.5);
+                border-radius: 5px;
+                color: tomato;
+            }
+        }
+
+        &.active{
+            a{
+                color: tomato;
+            }
+        }
+    }
+}
+
+nav.open{
+    margin-right: 0;
+}
+
+.menu-bar{
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: $pointer;
+    transition: 0.6s;
+
+    .bar{
+        height: 5px;
+        width: 100%;
+        border-radius: 5px;
+        transition: 0.7s;
+        background: white;
+        cursor: $pointer;
+    }
+    
+    .bar1{
+        width: 60%;
+    }
+    
+    .bar3{
+        width: 60%;
+        align-self: flex-end;
+    }
+}
+
+.menu-bar.open{
+    height: 60px;
+    width: 60px;
+    //margin-right: 260px;
+    right: 0px;
+    top: 0;
+    padding: 15px;
+    .bar{
+        transform: rotate(-45deg) translateZ(5px);
+        z-index: 2;
+    }
+    .bar1{
+        transform: rotate(45deg) translateX(7px) translateY(2px);
+        z-index: 1;
+    }
+    .bar3{
+        transform: rotate(45deg) translateX(-5px) translateY(-2px);
+        z-index: 1;
+    }
+}
+
+.TopSection{
+    display: flex;
+    width: 100%;
+    background: rgba(#000, 0.85);
+    height: 120px;
+    padding: 10px 20px;
+    user-select: none;
+    cursor: $pointer;
+    .logo{
+        cursor: $pointer;
+        height: 40px;
+        width: 110px;
+        border: 20px solid transparent;
+        border-bottom: 10px solid white;
+        border-left: 10px solid white;
+        transform: rotate(-45deg);
+        padding: 10px;
+        
+        div{
+            cursor: $pointer;
+            height: 100%;
+            width: 100%;
+            border: 10px solid transparent;
+            border-bottom: 10px solid white;
+            border-left: 10px solid white;
+            padding: 10px;
+            
+            div{
+                cursor: $pointer;
+                height: 100%;
+                width: 100%;
+                border: 10px solid transparent;
+                border-bottom: 10px solid white;
+                border-left: 10px solid white;
+            }
+        }
+    }
+    
+    .title{
+        padding: 20px;
+        height: 100%;
+        color: white;
+        font-size: 20px;
+        font-family: $kaushan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: $pointer;
+    }
+}
+
+.secTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    flex: 0.7;
+    font-family: $kallam;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: $pointer;
+}
+
+.phaseTwo{
+    height: 100%;
+    width: 100%;
+    padding: 140px 50px;
+    color: white;
+
+    h1{
+        font-size: 90px;
+        font-weight: bold;
+        text-shadow: 0 0 20px #000;
+        font-family: $squada;
+    }
+
+    h3{
+        font-size: 25px;
+        font-family: $ostwald;
+
+        span{
+            color: orange;
+            font-size: 35px;
+            font-family: $teko;
+        }
+    }
+    
+    p{
+        color: white;
+        font-family: $righteous;
+        font-size: 24px;
+        letter-spacing: -1px;
+
+        span{
+            color: orange;
+            font-size: 40px;
+            font-family: $teko;
+        }
+    }
+
+}
+
+.scroll{
+    animation-name: viewScroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+}
+
+.scroll.one{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    border-top: 0;
+    border-left: 0;
+    height: 60px;
+    width: 60px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    padding: 8px;
+    animation-delay: 0.2s;
+    opacity: 0;
+    
+    .two{
+        height: 100%;
+        width: 100%;
+        border: 5px solid white;
+        border-top: 0;
+        border-left: 0;
+        border-radius: 5px;
+        padding: 8px;
+        animation-delay: 1s;
+        opacity: 0;
+        
+        .three{
+            height: 100%;
+            width: 100%;
+            border: 5px solid white;
+            border-top: 0;
+            border-left: 0;
+            border-radius: 5px;
+            padding: 8px;
+            animation-delay: 2s;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes viewScroll{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.cursorBlink{
+    height: 28px;
+    width: 3px;
+    background: white;
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.6s infinite alternate;
+    animation-play-state: running;
+}
+
+.cursorBlink.typing{
+    animation: none;
+}
+
+@keyframes blink{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}

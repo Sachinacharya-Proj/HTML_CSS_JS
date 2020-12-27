@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PRELOADER ANIMATION | PRELOAD.JS</title>
+</head>
+<body>
+    <div id="progress"></div>
+    <div id="gallery">
+        <img src="https://images.unsplash.com/photo-1598866908715-631cdc5871f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+    </div>
+
+
+
+    <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+    <script>
+        let progress = document.getElementById("progress");
+        let gallery = document.getElementById("gallery");
+
+        var queue = new createjs.LoadQueue(false);
+
+        queue.on("progress", event =>{
+            let progress = Math.floor(event.progress * 100);
+            this.progress.style.width = progress + "%";
+            if(progress == 100){
+                console.log("Conpletely Loaded");
+                document.body.style.background = "white";
+            }
+        })
+
+        queue.on("complete", event =>{
+            gallery.classList.add("fadeIn");
+            setTimeout(() => {
+            progress.classList.add("fadeOut");
+            }, 500);
+        })
+        
+        queue.on("fileload",handleFileComplete);
+        queue.loadFile("https://images.unsplash.com/photo-1598883840810-8e2a4cbb7a99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+        queue.loadFile("https://images.unsplash.com/photo-1598287635238-6016258ab1ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+        queue.loadFile("https://images.unsplash.com/photo-1598886995752-ddea3b81c652?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+        queue.loadFile("https://images.unsplash.com/photo-1598866908715-631cdc5871f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+       function handleFileComplete(event){
+            var item = event.item;
+            var type = item.type;
+          //  console.log(event)
+            if(type == createjs.Types.IMAGE){
+                gallery.appendChild(event.result);
+            }
+        }
+    </script>
+</body>
+</html>

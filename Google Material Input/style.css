@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form {
+  width: 350px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: none;
+  border: 2px solid #1a4a72;
+  border-radius: 5px;
+  color: #1a4a72;
+  font-family: sans-serif;
+}
+
+form div {
+  margin: 10px 0px 10px 0px;
+  height: 50px;
+  padding: 10px 0px 10px 0px;
+}
+
+form label {
+  display: block;
+  color: #1a4a72;
+  font-family: sans-serif;
+  margin-top: -28px;
+  margin-left: 10px;
+  font-size: 14px;
+  pointer-events: none;
+  -webkit-transition: 0.6s all ease-in-out;
+  transition: 0.6s all ease-in-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+form input:focus ~ label, form input:valid ~ label {
+  color: #1a4a72;
+  font-size: 13px;
+  margin-top: -45.5px;
+  background: white;
+}
+
+form .send {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form .div {
+  margin: 0;
+  padding: 0;
+}
+
+form .div h1 {
+  text-align: center;
+  color: #1a4a72;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+form .user {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=style.css.map */

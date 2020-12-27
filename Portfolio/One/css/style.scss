@@ -1,0 +1,486 @@
+@font-face {
+    font-family: 'BravAda-Arma-Regular';
+    src:url('/font/BravAda-Arma-Regular.ttf.woff') format('woff'),
+    url('/font/BravAda-Arma-Regular.ttf.svg#BravAda-Arma-Regular') format('svg'),
+    url('/font/BravAda-Arma-Regular.ttf.eot'),
+    url('/font/BravAda-Arma-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+$anton: 'Anton', sans-serif;
+$roboto: 'Roboto Condensed', sans-serif;
+$tradeWinds: 'Trade Winds', cursive;
+$backgroundColor1: rgb(6, 4, 26);
+$color1: #e94c3f;
+$mainCursor: url("/cursor/main.cur"),auto;
+$pointer: url("/cursor/cursor.cur"),pointer;
+$hightlightCursor: url("/cursor/hightlight.cur"),pointer;
+$bravAda: 'BravAda-Arma-Regular';
+//Basic Formatings
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+//Basic Formatings
+
+body{
+    background: #f2f2f2;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    cursor: $mainCursor;
+
+}
+
+//NAvigations
+nav{
+    display: flex;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 75px;
+    line-height: 50px;
+    justify-content: space-evenly;
+    //background: red;
+    padding: 10px 10px 10px 0;
+    div{
+        text-align: left;
+        padding-left: 20px;
+        color: white;
+        font-family: $tradeWinds;
+        font-size:22px;
+        width: 100%;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 1px;
+        transition: 0.6s all linear;
+        padding-top: 10px;
+        padding-left: 30px;
+        
+        &:hover{
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-color: black;
+            color: white;
+            -webkit-text-stroke-width: 2px;
+            cursor: $pointer;
+        }
+    }
+    
+    ul{
+        padding-top: 0px;
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+        width: 800px;
+        justify-content: space-evenly;
+        height: 100%;
+        
+        li{
+            color: white;
+            cursor: $hightlightCursor;
+            font-family: $anton;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            a{
+                position: relative !important;
+                color: white;
+                text-decoration: none;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                display: block;
+                transition: 0.6s all linear;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 2px;
+                    background: $color1;
+                    transition: 0.6s all linear;
+                }
+                &:hover{
+                    color: $color1;
+                    cursor: $hightlightCursor;
+                }
+
+                &:hover::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+#svgLogo{
+    cursor: $pointer;
+}
+
+#svglogo path:nth-child(2){
+    stroke-dasharray: 336.0128479003906;
+    stroke-dashoffset: 336.0128479003906;
+    animation: ReturnText 2s ease forwards ;
+}
+
+#svglogo path:nth-child(3){
+    stroke-dasharray: 242.136474609375;
+    stroke-dashoffset: 242.136474609375;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  1s;
+}
+#svglogo path:nth-child(4){
+    stroke-dasharray: 181.51454162597656;
+    stroke-dashoffset: 181.51454162597656;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  1.5s;
+    
+}
+#svglogo path:nth-child(5){
+    stroke-dasharray: 252.89198303222656;
+    stroke-dashoffset: 252.89198303222656;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  2s;
+    
+}
+#svglogo path:nth-child(6){
+    stroke-dasharray: 115.40562438964844;
+    stroke-dashoffset: 115.40562438964844;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  2.5s;
+
+    
+}
+#svglogo path:nth-child(7){
+    stroke-dasharray: 263.1415710449219;
+    stroke-dashoffset: 263.1415710449219;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  3s;
+    
+}
+#svglogo path:nth-child(8){
+    stroke-dasharray: 351.44476318359375;
+    stroke-dashoffset: 351.44476318359375;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  3.5s;
+    
+}
+#svglogo path:nth-child(9){
+    stroke-dasharray: 181.51614379882812;
+    stroke-dashoffset: 181.51614379882812;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  4s;
+    
+}
+#svglogo path:nth-child(10){
+    stroke-dasharray: 252.89291381835938;
+    stroke-dashoffset: 252.89291381835938;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  4.5s;
+    
+}
+#svglogo path:nth-child(11){
+    stroke-dasharray: 242.13717651367188;
+    stroke-dashoffset: 242.13717651367188;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  5s;
+    
+}
+#svglogo path:nth-child(12){
+    stroke-dasharray: 336.0128479003906;
+    stroke-dashoffset: 336.0128479003906;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  5.5s;
+    
+}
+#svglogo path:nth-child(13){
+    stroke-dasharray: 242.136474609375;
+    stroke-dashoffset: 242.136474609375;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  6s;
+    
+}
+#svglogo path:nth-child(14){
+    stroke-dasharray: 181.51454162597656;
+    stroke-dashoffset: 181.51454162597656;
+    animation: ReturnText 2s ease forwards ;
+    animation-delay:  6.6s;
+
+}
+
+@keyframes ReturnText{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+.home{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    .cliper{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3000;
+    }
+    .goodAtDivisions{
+        position: absolute;
+        bottom: 12rem;
+        z-index: 10000;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        height: 130px;
+        padding: 10px;
+        width:620px;
+        
+        h3{
+            color: white;
+            font-family: $anton;
+            font-size: 25px;
+            font-weight: normal;
+            text-shadow: 10px 5px 5px #000;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color:black;
+            -webkit-box-reflect: below -15px linear-gradient(transparent,rgba(#000,0.7));
+        }
+        div{
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+            justify-content: space-evenly;
+            display: flex;
+            div{
+                height: 100%;
+                width: 100%;
+                display: block;
+                cursor: $pointer;
+                margin: 10px;
+                background: black;
+                transition: 1s all linear;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow:  5px 5px 10px rgba(#111,1),
+                         -5px -5px 10px rgba(#111,1),
+                        inset -5px -5px 10px rgba(#fff,0.1),
+                        inset 5px 5px 10px rgba(#fff,0.2);
+                &:hover{
+                    box-shadow: inset 5px 5px 10px rgba(#111,1),
+                   inset -5px -5px 10px rgba(#111,1),
+                 -5px -5px 10px rgba(#fff,0.1),
+                 5px 5px 10px rgba(#fff,0.2);
+                    img{
+                        filter: grayscale(0);
+                        transform: scale(1.1);
+                    }
+                    p{
+                        color: #e94c3f;
+                    }
+                }
+                img{
+                    height: 50px;
+                    width: 50px;
+                    filter: grayscale(10);
+                    transition: 0.6s all linear;
+                }
+
+                p{
+                    color: #ccc;
+                    font-family: $roboto;
+                    transition: 0.6s all linear;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    .myBasicDetails{
+        z-index: 1000000 ;
+        position: absolute ;
+        top: 35%;
+        left: 50px;
+        color: white;
+        font-family: $anton;
+        text-shadow: 0px 0px 15px red;
+        h1{
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            font-weight: normal;
+            font-size: 35px;
+            padding: 10px 10px 30px 10px;
+            -webkit-box-reflect: below -65px linear-gradient(transparent,rgba(#000,0.5));
+            
+            .name{
+                color: rgb(44, 0, 0);
+            }
+        }
+        h2{
+            font-weight: normal;
+            padding: 20px 10px 10px 10px;
+            -webkit-box-reflect: below -25px linear-gradient(transparent,rgba(#000,0.2));
+
+            .cursorBlink{
+                animation: blink 0.5s linear infinite alternate;
+                &.typing{
+                    animation: none;
+                }
+            }
+        }
+    }
+
+    .logoContainer{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        z-index: 100000;
+        height: 250px;
+        width: 250px;
+
+        .logoDiv{
+            img{
+                height: 100%;
+                width: 100%;
+                cursor: $pointer;
+            }
+        }
+
+        p{
+            color: white;
+            position: absolute;
+            bottom: -10px;
+            text-align: center;
+            width: 100%;
+            display: block;
+            background: transparent;
+            padding: 10px;
+            font-size: 25px;
+            font-family: $tradeWinds;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            transition: 0.6s all linear;
+            left: 20px;
+            cursor: $pointer;
+
+            &:hover{
+                -webkit-text-fill-color: white;
+                color: black;
+                -webkit-text-stroke-width: 2px;
+            }
+        }
+    }
+    .innerSlider{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+    .toggler{
+        height: 130px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+
+
+        div{
+            height: 22px;
+            width: 22px;
+            background: transparent;
+            border-radius: 50%;
+            cursor: $pointer;
+            border: 3px solid white;
+            transition: 0.6s all linear;
+        }
+    }
+
+   .scrollBox{
+       position: absolute;
+       transform: translateX(-50%);
+       bottom: 10px;
+       left: 50%;
+    .scrollShower{
+        height: 75px;
+        width: 45px;
+        background: transparent;
+        border-radius: 60px;
+        position: relative;
+        border: 2px solid white;
+        padding: 5px;
+        div{
+            height: 20px;
+            width: 5px;
+            border-radius: 10px;
+            background: white;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            animation-name: goUpDown;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transition: 0.6s all linear;
+        }
+    }
+
+    p{
+        text-align: center;
+        z-index: 5;
+        padding-top: 10px;
+        color: white;
+        font-family: $roboto;
+    }
+   }
+}
+
+@keyframes goUpDown{
+    from{
+        bottom: 10px;
+        height: 10px;
+    }to{
+        height: 20px;
+        bottom: calc(75% - 10px);
+    }
+}
+
+@keyframes blink{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.updatingText{
+    color: orangered;
+}

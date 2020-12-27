@@ -1,0 +1,151 @@
+$roboto: 'Roboto', sans-serif;
+//Basic Formating
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.contents{
+    width: 300px;
+    border-radius: 10px;
+    background: rgb(233, 229, 229);
+    box-shadow: 10px 10px 20px rgb(78, 77, 77), 10px 10px 50px rgb(78, 77, 77), -10px 10px 20px rgb(240, 229, 229), -10px 10px 50px rgb(223, 216, 216);
+}
+
+.screen{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+
+    .lineHistory{
+        padding: 10px 0;
+        width: 100%;
+        color: rgb(179, 177, 177);
+        font-family: $roboto;
+        font-size: 13px;
+        display: flex;
+        .history{
+            width: 100%;
+        }
+    }
+
+
+    .entry_input{
+        height: 40px;
+        width: 100%;
+        line-height: 50px;
+        font-family: $roboto;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        font-size: 20px;
+    }
+}
+
+.buttons{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .rows{
+        width: 100%;
+        padding: 2px;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+
+        button{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            font-family: $roboto;
+            font-size: 17px;
+            cursor: pointer;
+            &:focus{
+                animation: bounce 0.6s;
+                
+            }
+        }
+    }
+}
+
+@keyframes bounce{
+    from{
+        font-size: 20px;
+    }to{
+        font-size: 14px;
+    }
+}
+
+.def{
+    background: #fff;
+}
+
+.numbs{
+    background: none;
+}
+
+.operator{
+    background: rgb(0, 146, 151);
+}
+
+.equals{
+    background: rgb(211, 193, 28);
+}
+
+.add{
+    background: rgba(255, 38, 0, 0.815);
+    font-size: 19px;
+}
+
+.minus{
+    background: rgba(171, 26, 238, 0.836);
+}
+
+.times{
+    background: rgba(4, 197, 187, 0.849);
+}
+
+.rowFive{
+    display: block;
+
+    .zero{
+        width: 203px !important;
+        border-radius: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.hiddenInput{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+
+.mod{
+    background: #fff !important;
+}

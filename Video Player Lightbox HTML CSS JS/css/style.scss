@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        max-width: 76vw;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        box-shadow: -15px -5px 20px rgb(95, 93, 93),
+        15px 5px 20px #333;
+
+        .menu{
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            cursor: pointer;
+            padding: 10px;
+            transition: all 0.6s linear;
+            text-shadow: 0 0 10px #000;
+            &:hover svg circle{
+                fill: orangered;
+            }
+        }
+
+
+        .videoContainer{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            video{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.controlsContainer{
+    width: 100%;
+    height: 130px; 
+    background: rgba(#000,0.5);
+    border-top: 0;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0;
+
+    .progressDiv{
+        width: 100%;
+        height: 0px;
+        position: relative;
+        left: 0px;
+
+        .bar {
+            position: absolute;
+            box-shadow: 5px 5px 10px #000;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .bar1{
+            width: 0%;
+            height: 5px;
+            background: red;
+            cursor: pointer;
+            z-index: 1000;
+            pointer-events: none;
+            border-radius: 0;
+            transition: height 0.6s all linear;
+ 
+            &::after{
+                content: "";
+                opacity: 0;
+                position: absolute;
+                top: -60%;
+                right: -5px;
+                height: 10px;
+                width: 10px;
+                background: red;
+                transition: opacity 0.6s linear;
+                border-radius: 50%;
+            }
+        }
+
+        .bar2{
+            width: 100%;
+            appearance: none;
+            height: 5px;
+            outline: none;
+            border-radius: 0;
+            cursor: pointer;
+
+            &::-webkit-slider-thumb{
+                appearance: none;
+                height: 5px;
+                width: 5px;
+                //border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.bar2:hover ~ .bar{
+    height: 7px;
+}
+
+.bar2:hover ~ .bar1::after{
+    opacity: 1;
+    height: 13px;
+    width: 13px;
+    top: -55%;
+}
+
+.playPause.play::before{
+    content: "\f04b";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.playPause.pause::before{
+    content: "\f04c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.screenToggle.full::before{
+    content: "\f065";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.screenToggle.nor::before{
+    content: "\f78c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.buttonDiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 100%;
+
+
+    button{
+        height: 100%;
+        width: 100%;
+        display: block;
+        background: none;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 20px;
+        text-shadow: 5px 5px 10px #000;
+        transition: 0.6s all linear;
+        
+
+        svg rect{
+            transition: 0.6s all linear;
+        }
+
+        &:hover{
+            color: orangered;
+        }
+
+        &:hover svg rect:nth-last-of-type(1){
+            fill: orangered;
+        }
+
+        &:hover svg rect:nth-last-of-type(2){
+            stroke: orangered;
+        }
+    }
+}
+
+
+.menuOtions{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    width: 205px;
+    flex-direction: column;
+    background: white;
+    color: black;
+    align-items: center;
+    font-family: "Roboto",sans-serif;
+    border-radius: 10px;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.6s all linear;
+    box-shadow: 10px 10px 50px #000;
+    p{
+        padding: 10px;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.6s all linear;
+        &:first-of-type{
+            border-radius: 10px 10px 0px 0px;
+        }
+        &:nth-last-child(1){
+            border-radius: 0px 0px 10px 10px;
+        }
+        &:hover{
+            background: orangered;
+            color: white;
+            a,input{
+                color: white;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            width: 100%;
+            transition: 0.6s all linear;
+        }
+    }
+    input{
+        width: 40px;
+        color: black;
+        background: none;
+        border: none;
+        outline: none;
+        font-family: 'Roboto',sans-serif;
+        font-size: 15px;
+        transition: 0.6s all linear;
+
+        &::increment{
+            display: block;
+        }
+    }
+}
+
+
+.menuOtions.open{
+    opacity: 0;
+    pointer-events: none;
+}

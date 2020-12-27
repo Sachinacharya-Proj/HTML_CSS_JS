@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body form {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body form p {
+  color: #7a7474;
+  font-family: sans-serif;
+  padding: 10px;
+  width: 350px;
+  border-radius: 10px;
+  border: 2px solid #b1aeae;
+  cursor: pointer;
+  text-align: center;
+}
+
+body form .main {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: visible;
+  border: 2px dotted #a5a5a5;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body form .main div {
+  height: 200px;
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  background: lightgray;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  color: #aaa8a8;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 20px orangered;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+body form .main div::after {
+  content: attr(data-name);
+  color: #a8a2a2 !important;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 13px !important;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+body {
+  color: #470a5a;
+}
+/*# sourceMappingURL=style.css.map */

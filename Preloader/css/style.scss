@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: rgb(29,29,29);
+    transition: 0.6s all linear;
+}
+
+
+#gallery{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-evenly;
+    opacity: 0;
+    align-items: center;
+    transition: 1s all linear;
+    transition-delay: 1s;
+    transform: scale(0.8);
+
+    img{
+        height: 300px;
+        width: 250px;
+        cursor: pointer;
+    }
+}
+
+.fadeIn{
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+#progress{
+    position: absolute;
+    top: 45%;
+    height: 2px;
+    background: #fff;
+    opacity: 1;
+    z-index: 10;
+    transition: 1s all ease;
+}
+
+.fadeOut{
+    opacity: 0 !important;
+    transition: opacity 2s !important;
+}

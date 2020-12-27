@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+section {
+  background: #07463d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 80px 400px 200px 400px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+section h2 {
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  text-shadow: 0 0 10px #fff;
+}
+
+section h2:hover {
+  background: -webkit-gradient(linear, left top, right top, from(blue), color-stop(yellow), color-stop(gold), to(purple));
+  background: linear-gradient(to right, blue, yellow, gold, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+section p {
+  font-family: sans-serif;
+  padding: 10px;
+  text-shadow: 0 0 10px #fff;
+  font-weight: bold;
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #42748f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.preload.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cloud1, .cloud2, .cloud3 {
+  height: 100px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.cloud1 {
+  top: 25%;
+  -webkit-transform: translate(100%, -25%);
+          transform: translate(100%, -25%);
+  -webkit-animation: cloud 3s ease infinite;
+          animation: cloud 3s ease infinite;
+}
+
+.cloud2 {
+  top: 50%;
+  -webkit-transform: translate(100%, -50%) perspective(1000px);
+          transform: translate(100%, -50%) perspective(1000px);
+  -webkit-animation: cloud 3s ease infinite 2s;
+          animation: cloud 3s ease infinite 2s;
+  z-index: 1;
+}
+
+.cloud3 {
+  top: 75%;
+  -webkit-transform: translate(100%, -75%);
+          transform: translate(100%, -75%);
+  -webkit-animation: cloud 3s ease infinite 1s;
+          animation: cloud 3s ease infinite 1s;
+}
+
+.airplane {
+  height: 200px;
+  animation: airplane 1s ease infinite alternate-reverse;
+}
+
+.preload h3 {
+  position: absolute;
+  top: 75%;
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+}
+
+@-webkit-keyframes airplane {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
+@keyframes airplane {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
+@-webkit-keyframes cloud {
+  from {
+    right: 0;
+  }
+  to {
+    right: 130%;
+  }
+}
+
+@keyframes cloud {
+  from {
+    right: 0;
+  }
+  to {
+    right: 130%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

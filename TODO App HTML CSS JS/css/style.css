@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.container {
+  padding: 30px;
+  color: black;
+  border: 1.5px solid #b6b2b2;
+  border-radius: 30px 20px 30px 20px;
+  width: 450px;
+  min-height: 300px;
+}
+
+.container h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  color: #03583c;
+  padding: 10px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .inputField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.container .inputField input {
+  width: 100%;
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5;
+          flex: 2.5;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  border: 1.5px solid #b1adad;
+  border-right: 0;
+}
+
+.container .inputField input:focus, .container .inputField input:hover {
+  border-color: #0e689c;
+}
+
+.container .inputField button {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #065544;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container .inputField button:hover {
+  opacity: 0.8;
+}
+
+.container .content {
+  width: 100%;
+  max-height: 400px;
+  background: transparent;
+  height: 400px;
+  display: block;
+  overflow: hidden;
+  overflow-y: visible;
+  border: 1.5px solid #b3b3b3;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.container .content:hover {
+  border-color: #0e689c;
+}
+
+.container .content .noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #adacac;
+  font-family: sans-serif;
+  border: none;
+  text-align: center;
+  text-transform: none;
+}
+
+.container p {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1.5px solid #9b9797;
+  color: block;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container p:hover {
+  border-color: #0d8063;
+}
+
+.container p span {
+  padding: 10px;
+  width: 100%;
+}
+
+.container p .delete {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  cursor: pointer;
+}
+
+.container p .delete:hover {
+  color: red;
+  text-shadow: 10px 10px 10px 10px red;
+}
+
+.deletedItems {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.wipe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 60px;
+}
+
+.wipe button {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: #e90c0c;
+  border: 1.5px solid #8f8f8f;
+  cursor: pointer;
+  color: white;
+}
+
+.wipe button:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=style.css.map */

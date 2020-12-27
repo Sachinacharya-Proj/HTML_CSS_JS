@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+::selection{
+    color: orangered;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: white;
+    font-family: sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.wavy{
+    position: relative;
+    -webkit-box-reflect: below -50px linear-gradient(transparent,rgba(#000,0.2));
+
+    span{
+        position: relative;
+        display: inline-block;
+        font-size: 2em;
+        animation: animate 0.3s ease-in-out infinite alternate;
+        animation-delay: calc(0.1s * var(--i));
+        background: linear-gradient(45deg, yellow, purple, pink);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes animate{
+    from{
+        transform: translateY(-20px);
+        -webkit-text-fill-color: transparent;
+    }
+    to{
+        transform: translateY(20px);
+        -webkit-text-fill-color: orangered;
+    }
+}

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Anton&family=Courgette&family=Kalam&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital@0;1&family=Oswald&family=Pathway+Gothic+One&family=Playball&family=Righteous&family=Roboto&family=Squada+One&family=Teko&family=Trade+Winds&family=Yanone+Kaffeesatz&family=Yellowtail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.contents {
+  width: 40rem;
+  padding: 10px 135px;
+  max-height: 85vh;
+  height: 80rem;
+}
+
+.contents .card {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s all linear;
+  transition: 0.5s all linear;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.contents .title {
+  min-height: 13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contents .title img {
+  height: 6rem;
+}
+
+.contents .title div {
+  position: absolute;
+  height: 9rem;
+  width: 9rem;
+  background: linear-gradient(40deg, blue, red);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.contents .desc {
+  height: 17rem;
+}
+
+.contents .desc .info h1 {
+  font-family: "Roboto", sans-serif;
+  color: #525252;
+  text-align: center;
+  font-size: 18px;
+}
+
+.contents .desc .info h3 {
+  font-weight: lighter;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #525252;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 10px 0px;
+}
+
+.contents .desc .sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0px 10px;
+}
+
+.contents .desc .sizes button {
+  width: 5em;
+  padding: 10px;
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  border-radius: 5px;
+}
+
+.contents .desc .sizes button:hover {
+  background: #525252;
+  color: white;
+}
+
+.contents .desc .sizes button.active {
+  background: #525252;
+  color: white;
+}
+
+.contents .desc .sizes button.active:hover {
+  color: #525252;
+  background: white;
+}
+
+.contents .purchases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.contents .purchases button {
+  outline: none;
+  background: rgba(240, 128, 128, 0.8);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  display: block;
+  width: 80%;
+  padding: 11px;
+  cursor: pointer;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.contents .purchases button:hover {
+  background: lightcoral;
+}
+/*# sourceMappingURL=style.css.map */

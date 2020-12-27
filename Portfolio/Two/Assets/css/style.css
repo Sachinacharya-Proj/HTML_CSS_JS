@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Anton&family=Courgette&family=Kalam&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital@0;1&family=Oswald&family=Pathway+Gothic+One&family=Playball&family=Righteous&family=Roboto&family=Squada+One&family=Teko&family=Trade+Winds&family=Yanone+Kaffeesatz&family=Yellowtail&display=swap");
+@font-face {
+  font-family: 'BravAda-Arma-Regular';
+  src: url("/Assets/font/BravAda-Arma-Regular.ttf.woff") format("woff"), url("/Assets/font/BravAda-Arma-Regular.ttf.svg#BravAda-Arma-Regular") format("svg"), url("/Assets/font/BravAda-Arma-Regular.ttf.eot"), url("/Assets/font/BravAda-Arma-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: url("/Assets/cursor/main.cur"), auto;
+}
+
+li, button {
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+}
+
+a {
+  cursor: url("/Assets/cursor/hightlight.cur"), pointer;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: url("/Assets/img/Background/Primary 2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+body .main {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 340px;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: -340px;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav div {
+  padding: 45px 20px;
+  color: white;
+  font-family: "BravAda-Arma-Regular";
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li {
+  list-style: none;
+  display: block;
+  margin: 10px;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: white;
+  font-family: "Teko", sans-serif;
+  font-size: 18px;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: tomato;
+}
+
+nav li.active a {
+  color: tomato;
+}
+
+nav.open {
+  margin-right: 0;
+}
+
+.menu-bar {
+  position: fixed;
+  right: 10px;
+  top: 20px;
+  height: 70px;
+  width: 70px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.menu-bar .bar {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  background: white;
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+}
+
+.menu-bar .bar1 {
+  width: 60%;
+}
+
+.menu-bar .bar3 {
+  width: 60%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.menu-bar.open {
+  height: 60px;
+  width: 60px;
+  right: 0px;
+  top: 0;
+  padding: 15px;
+}
+
+.menu-bar.open .bar {
+  -webkit-transform: rotate(-45deg) translateZ(5px);
+          transform: rotate(-45deg) translateZ(5px);
+  z-index: 2;
+}
+
+.menu-bar.open .bar1 {
+  -webkit-transform: rotate(45deg) translateX(7px) translateY(2px);
+          transform: rotate(45deg) translateX(7px) translateY(2px);
+  z-index: 1;
+}
+
+.menu-bar.open .bar3 {
+  -webkit-transform: rotate(45deg) translateX(-5px) translateY(-2px);
+          transform: rotate(45deg) translateX(-5px) translateY(-2px);
+  z-index: 1;
+}
+
+.TopSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  height: 120px;
+  padding: 10px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+}
+
+.TopSection .logo {
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+  height: 40px;
+  width: 110px;
+  border: 20px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  padding: 10px;
+}
+
+.TopSection .logo div {
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+  height: 100%;
+  width: 100%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+  padding: 10px;
+}
+
+.TopSection .logo div div {
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+  height: 100%;
+  width: 100%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+.TopSection .title {
+  padding: 20px;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  font-family: "Kaushan Script", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+}
+
+.secTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 100%;
+  -webkit-box-flex: 0.7;
+      -ms-flex: 0.7;
+          flex: 0.7;
+  font-family: "Kalam", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+  cursor: url("/Assets/cursor/cursor.cur"), pointer;
+}
+
+.phaseTwo {
+  height: 100%;
+  width: 100%;
+  padding: 140px 50px;
+  color: white;
+}
+
+.phaseTwo h1 {
+  font-size: 90px;
+  font-weight: bold;
+  text-shadow: 0 0 20px #000;
+  font-family: "Squada One", cursive;
+}
+
+.phaseTwo h3 {
+  font-size: 25px;
+  font-family: "Oswald", sans-serif;
+}
+
+.phaseTwo h3 span {
+  color: orange;
+  font-size: 35px;
+  font-family: "Teko", sans-serif;
+}
+
+.phaseTwo p {
+  color: white;
+  font-family: "Righteous", cursive;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+.phaseTwo p span {
+  color: orange;
+  font-size: 40px;
+  font-family: "Teko", sans-serif;
+}
+
+.scroll {
+  -webkit-animation-name: viewScroll;
+          animation-name: viewScroll;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.scroll.one {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 5px solid white;
+  border-top: 0;
+  border-left: 0;
+  height: 60px;
+  width: 60px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 10px;
+  padding: 8px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.scroll.one .two {
+  height: 100%;
+  width: 100%;
+  border: 5px solid white;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 5px;
+  padding: 8px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  opacity: 0;
+}
+
+.scroll.one .two .three {
+  height: 100%;
+  width: 100%;
+  border: 5px solid white;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 5px;
+  padding: 8px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+}
+
+@-webkit-keyframes viewScroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes viewScroll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cursorBlink {
+  height: 28px;
+  width: 3px;
+  background: white;
+  display: inline-block;
+  margin-left: 5px;
+  -webkit-animation: blink 0.6s infinite alternate;
+          animation: blink 0.6s infinite alternate;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.cursorBlink.typing {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

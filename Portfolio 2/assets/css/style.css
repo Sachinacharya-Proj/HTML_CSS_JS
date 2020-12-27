@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Anton&family=Courgette&family=Play&family=Kalam&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital@0;1&family=Oswald&family=Pathway+Gothic+One&family=Playball&family=Righteous&family=Roboto&family=Squada+One&family=Teko&family=Trade+Winds&family=Yanone+Kaffeesatz&family=Yellowtail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/background/Primary 2.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  height: 70px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav .name {
+  width: 330px;
+  color: white;
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+nav ul {
+  width: 45vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav ul li {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+nav ul li:nth-of-type(1) {
+  display: none;
+}
+
+nav ul li a {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Play", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: relative;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav ul li a.active {
+  color: tomato;
+}
+
+nav ul li a.active::before {
+  width: 50%;
+}
+
+nav ul li a:hover {
+  color: tomato;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-bottom: 2px solid #00bfe7;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+nav ul li a:hover::before {
+  width: 50%;
+}
+
+nav .secondary-items {
+  width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+nav .secondary-items span {
+  height: 20px;
+  width: 2px;
+  display: block;
+  background: rgba(204, 204, 204, 0.3);
+  margin: 5px 10px 0 10px;
+}
+
+nav .secondary-items p {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+nav .secondary-items p a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav .secondary-items p a:hover {
+  color: tomato;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: 14px;
+}
+
+.home {
+  display: block;
+  height: 90vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .main {
+  color: white;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .main p {
+  padding: 30px;
+  padding-left: 5px;
+  text-shadow: 0 0 20px #000;
+}
+
+.home .main p .contents {
+  text-transform: uppercase;
+  color: orange;
+  font-weight: bold;
+}
+
+.home .main p .cursor {
+  display: inline-block;
+  height: 15px;
+  width: 2px;
+  background: orange;
+  -webkit-animation: blink 0.4s infinite alternate;
+          animation: blink 0.4s infinite alternate;
+}
+
+.home .main p .cursor.typing {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.home .main h1 {
+  font-size: 50px;
+  padding: 5px;
+  padding-left: 0;
+  -webkit-animation: faded 4s infinite;
+          animation: faded 4s infinite;
+}
+
+.home .main h1:hover {
+  text-shadow: 0 0 20px #000;
+  cursor: pointer;
+}
+
+.home .main h2 {
+  padding: 5px;
+  font-size: 45px;
+  padding-left: 0px;
+  -webkit-animation: faded 4s infinite;
+          animation: faded 4s infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  cursor: pointer;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  font-family: "Kalam", cursive;
+}
+
+.home .main h2 span {
+  font-family: "Kalam", cursive;
+  color: tomato;
+}
+
+.home .main h2:hover {
+  text-shadow: 0 0 20px #000;
+  cursor: pointer;
+}
+
+.home .main .button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  -webkit-box-shadow: 0 10px 20px #000;
+          box-shadow: 0 10px 20px #000;
+  width: 200px !important;
+}
+
+.home .main .button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Play", sans-serif;
+}
+
+.home .main .button:hover a {
+  color: salmon;
+}
+
+.home .main .button:hover::before, .home .main .button:hover::after {
+  width: 98%;
+  pointer-events: none;
+  height: 95%;
+}
+
+.home .main .button::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  border: 3px solid #00bfe7;
+  border-right: 0;
+  border-bottom: 0;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+}
+
+.home .main .button::after {
+  position: absolute;
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  content: "";
+  right: 0;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  border: 3px solid #00bfe7;
+  border-left: 0;
+  border-top: 0;
+}
+
+@-webkit-keyframes faded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes faded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  height: 40px;
+  width: 110px;
+  border: 20px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+  -webkit-transform: rotate(-45deg) translate(10px, -40px);
+          transform: rotate(-45deg) translate(10px, -40px);
+  padding: 10px;
+}
+
+.logo.center {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+}
+
+.logo div {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+  padding: 10px;
+}
+
+.logo div div {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid white;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -10px;
+  color: white;
+  width: 150px !important;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 10px 10px 100px 5px #706868;
+          box-shadow: 10px 10px 100px 5px #706868;
+  cursor: pointer;
+  display: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+.menu-btn p {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  pointer-events: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-btn i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1116px) {
+  body {
+    max-width: 1116px;
+  }
+  nav {
+    height: 75px;
+  }
+  nav ul {
+    height: 400px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #222;
+    z-index: 2;
+    margin-top: -500px;
+    -webkit-transition: 0.3s all linear;
+    transition: 0.3s all linear;
+  }
+  nav ul.open {
+    margin-top: -14px;
+  }
+  nav .secondary-items {
+    display: none;
+  }
+  nav .menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 895px) {
+  body {
+    background-position: -200px 0px;
+  }
+}
+
+@media only screen and (max-width: 596px) {
+  body {
+    background-position: -410px 0px;
+    height: 100%;
+    width: 100%;
+  }
+  body nav {
+    width: 100%;
+  }
+  body nav .menu-btn {
+    width: 100%;
+  }
+  body .home {
+    width: 100%;
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Sachin Acharya</title>
+        <link rel="shortcut icon" href="/logo/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/slider.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Teko&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="mainNav">
+            <div class="logo">
+                <a href="index.html"><img src="/logo/logo.png" alt=""></a>
+            </div>
+            <ul id="nav">
+                <li class="current homes">
+                    <a class="linkToHome" href="#home">HOME</a>
+                    <p class="linkToHomeP"></p>
+                </li>
+                <li>
+                    <a class="linkToServices" href="#services">SERVICES</a>
+                    <p class="linkToServicesP"></p>
+                </li>
+                <li>
+                    <a class="linkToWork" href="#work">OUR WORK</a>
+                    <p class="linkToWorkP"></p>
+                </li>
+                <li>
+                    <a class="linkToTestimonials" href="#testimonials">TESTIMONIALS</a>
+                    <p class="linkToTestimonials"></p>
+                </li>
+                <li>
+                    <a class="linkToContacts" href="#contacts">CONTACTS</a>
+                    <p class="linkToContactsP"></p>
+                </li>
+            </ul>
+        </nav>
+        <!--Navigations-->
+        <!--Section: HOME-->
+        <section class="home" id="home">
+            <div class="container">
+                <div class="slides">
+            <div class="slide"><img src="/background/3.jpg" class="lax"  data-lax-translate-y="0 0,400 400"></div>
+            <div class="slide"><img src="/background/1.jpg" class="lax"  data-lax-translate-y="0 0,400 400"></div>
+            <div class="slide"><img src="/background/2.jpg" class="lax"  data-lax-translate-y="0 0,400 400"></div>
+            <div class="slide"><img src="/background/3.jpg" class="lax"  data-lax-translate-y="0 0,400 400"></div>
+            </div>
+            <div class="slide-controls">
+                <button id="prev-btn">
+                <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn">
+                <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            </div>
+            <div class="intro">
+                  <!--
+                      class="lax" data-lax-translate-y="0 0,400 -400" data-lax-opacity="0 1, (document.body.scrollHeight*0.1) 0"
+                       data-lax-translate-y="0 0,400 -100"
+                        data-lax-translate-y="0 0,400 -100"
+                  -->
+                  <h1>HELLO, MYSELF <span class="nameColor">SACHIN ACHARYA</span></h1>
+                  <h2>I AM A <span class="orangered"></span><span class="cursor"> | </span></h2>
+                  <button class="buttonForViewMyProfile" onclick="HideViewCards(0)">View My Profile</button>
+            </div>
+
+        </section>
+        <section id="services" class="services"></section>
+        <section id="work" class="work"></section>
+        <section id="testimonials" class="testimonials"></section>
+        <section id="contacts" class="contacts"></section>
+        <div class="cards">
+            <div class="IntroDuctionCards">
+            
+            </div>
+        </div>
+        <!--JAVASCRIPT AREA-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/nav.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+        <script>
+            $('#nav').onePageNav({
+	        currentClass: 'current',
+	        changeHash: false,
+	        scrollSpeed: 750,
+        	scrollThreshold: 0.5,
+        	filter: '',
+	        easing: 'swing'
+        });
+        </script>
+        <script>
+            window.onload = function() {
+	        lax.setup() // init
+
+        	const updateLax = () => {
+		    lax.update(window.scrollY)
+		    window.requestAnimationFrame(updateLax)
+	            }
+
+	        window.requestAnimationFrame(updateLax)
+            }
+        </script>
+    </body>
+</html>

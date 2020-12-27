@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #111;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 50;
+  margin: 1rem 0 3rem;
+  text-align: center;
+  color: white;
+  font-family: 'Righteous', cursive;
+  font-weight: normal;
+}
+
+.styling {
+  font-weight: 800;
+  color: lime;
+}
+
+.input_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.input_div input {
+  padding: 0.5rem 1rem;
+  height: 45px;
+  outline: none;
+  background: white;
+  width: 450px;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+  border-radius: 25px;
+  border: none;
+  text-transform: capitalize;
+}
+
+.input_div button {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: lime;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0.25rem;
+  line-height: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.1s all linear;
+  transition: 0.1s all linear;
+}
+
+.input_div button:hover {
+  opacity: 0.7;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.item {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid white;
+}
+
+.item_input {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  width: 350px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.editButton, .removeButton {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  color: lime;
+  cursor: pointer;
+}
+
+.removeButton {
+  color: #e00;
+  margin: 0 0;
+}
+/*# sourceMappingURL=style.css.map */

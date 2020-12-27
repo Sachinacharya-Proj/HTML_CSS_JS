@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgb(5, 78, 83);
+    overflow: hidden;
+}
+
+.distortion{
+    height: 500px;
+    width: 400px;
+    box-shadow: 0px 0px 50px #000;
+    img{
+        border-radius: 30px;
+    }
+}

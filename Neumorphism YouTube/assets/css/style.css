@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Anton&family=Courgette&family=Kalam&family=Kaushan+Script&family=Lobster&family=Lobster+Two:ital@0;1&family=Oswald&family=Pathway+Gothic+One&family=Playball&family=Righteous&family=Roboto&family=Squada+One&family=Teko&family=Trade+Winds&family=Yanone+Kaffeesatz&family=Yellowtail&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #d7dde6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.main {
+  height: 80vh;
+  width: 80vw;
+  background: #d7dde6;
+  border-radius: 20px;
+  -webkit-box-shadow: -15px -15px 35px #fff, 15px 5px 40px #000;
+          box-shadow: -15px -15px 35px #fff, 15px 5px 40px #000;
+  overflow: hidden;
+}
+
+.main .head {
+  text-align: center;
+  color: #FD676D;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .head .check {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  width: 65px;
+  height: 30px;
+  border-radius: 25px;
+  -webkit-box-shadow: -3px -3px 5px #fff, 3px 3px 10px #000;
+          box-shadow: -3px -3px 5px #fff, 3px 3px 10px #000;
+  cursor: pointer;
+}
+
+.main .head .check::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  background: #031e35;
+  border-radius: 50%;
+  -webkit-box-shadow: -3px -3px 5px #fff, 3px 3px 10px #000;
+          box-shadow: -3px -3px 5px #fff, 3px 3px 10px #000;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+.main .head .check:checked {
+  background: #031e35;
+}
+
+.main .head .check:checked::before {
+  background: #d7dde6;
+  top: -4px;
+  left: 40px;
+}
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contents .suggestions {
+  height: 100%;
+  max-height: 460px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-left: 20px;
+}
+
+.contents .suggestions div {
+  padding: 10px;
+  width: 300px;
+  height: 260px;
+  cursor: pointer;
+}
+
+.contents .suggestions div:hover .title {
+  color: #FD676D;
+}
+
+.contents .suggestions div:hover .thumbs img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contents .suggestions div .thumbs {
+  height: 200px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contents .suggestions div .thumbs img {
+  -webkit-transition: 0.6s all linear;
+  transition: 0.6s all linear;
+  height: 100%;
+  width: 100%;
+}
+
+.contents .suggestions div .title {
+  height: 60px;
+  padding: 10px 0;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contents .video-wrapper {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  width: 500px;
+  display: block;
+  padding: 10px 30px 30px 40px;
+}
+
+.contents .video-wrapper .inner-wrapper {
+  padding: 15px 15px 20px 15px;
+  border-radius: 20px;
+  -webkit-box-shadow: -15px -15px 35px #fff, 15px 5px 35px #000;
+          box-shadow: -15px -15px 35px #fff, 15px 5px 35px #000;
+}
+
+.contents .video-wrapper .inner-wrapper .title {
+  padding: 10px 10px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.contents .video-wrapper .heading {
+  width: 100%;
+  padding: 0px 0px 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contents .video-wrapper .heading span {
+  display: block;
+  height: 30px;
+  width: 5px;
+  background: #FD676D;
+}
+
+.contents .video-wrapper .heading p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  padding-left: 5px;
+  height: 100%;
+  line-height: 30px;
+}
+
+.contents .video-wrapper .video {
+  width: 100%;
+  height: 280px;
+  padding: 10px;
+}
+
+.contents .video-wrapper .video img {
+  height: 100%;
+  width: 100%;
+}
+
+.contents .info-panel {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.contents .info-panel .subs, .contents .info-panel .views, .contents .info-panel .engage {
+  width: 100%;
+  height: 100px;
+  margin: 20px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px -10px 20px #fff, 10px 5px 15px #000;
+          box-shadow: -10px -10px 20px #fff, 10px 5px 15px #000;
+  cursor: pointer;
+}
+
+.contents .info-panel .subs .icon, .contents .info-panel .views .icon, .contents .info-panel .engage .icon {
+  font-size: 35px;
+  color: #FD676D;
+}
+
+.contents .info-panel .subs .number, .contents .info-panel .views .number, .contents .info-panel .engage .number {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.contents .info-panel .subs .format, .contents .info-panel .views .format, .contents .info-panel .engage .format {
+  color: #ee3d43;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.dark {
+  background: #000;
+}
+
+body.dark * {
+  -webkit-filter: invert(10);
+          filter: invert(10);
+}
+
+body.dark img {
+  -webkit-filter: invert(10);
+          filter: invert(10);
+}
+/*# sourceMappingURL=style.css.map */
